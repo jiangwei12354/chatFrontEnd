@@ -1,43 +1,66 @@
 <template>
   <view class="content">
-    <image class="logo" src="@/static/logo.png"></image>
-    <view class="text-area">
-      <text class="title">Hello RuoYi</text>
+    <view class="list">
+      <view class="list-left">
+        <uni-badge absolute="rightTop" text="2">
+          <img src="" alt="" />
+        </uni-badge>
+      </view>
+      <view class="list-center">
+        <view class="list-name">hha</view>
+        <view class="list-content">asdfoji</view>
+      </view>
+      <view class="list-right">
+        <view class="list-time">20:01</view>
+        <view class="list-icon"></view>
+      </view>
     </view>
   </view>
 </template>
 
 <script>
-  export default {
-    onLoad: function() {
-    }
-  }
+export default {
+  onLoad: function () {},
+};
 </script>
 
-<style>
-  .content {
-    display: flex;
+<style lang="scss" scoped>
+.content {
+}
+/deep/.uni-badge--x {
+  width: 100%;
+  height: 100%;
+}
+.list {
+  display: flex;
+  padding: 20rpx 30rpx;
+  align-items: center;
+  background: #fff;
+  .list-left {
+    width: 100rpx;
+    height: 100rpx;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  .list-center {
+    flex: 1;
+    margin-left: 20rpx;
+    display: inline-flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    .list-name {
+      font-weight: 500;
+      font-size: 30rpx;
+    }
+    .list-content {
+      color: #8f8c8c;
+    }
   }
-
-  .logo {
-    height: 200rpx;
-    width: 200rpx;
-    margin-top: 200rpx;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50rpx;
+  .list-right {
   }
-
-  .text-area {
-    display: flex;
-    justify-content: center;
-  }
-
-  .title {
-    font-size: 36rpx;
-    color: #8f8f94;
-  }
+}
 </style>
